@@ -2,8 +2,10 @@
 
 import time
 
+
 def start_game():
-    print('''
+    print(
+        """
 ´´´´´´´´´´´´´´´´´´´ ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´´´´`
 ´´´´´´´´´´´´´´´´´¶¶¶¶¶¶´´´´´´´´´´´´´¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´
 ´´´´´´´´´´´´´´¶¶¶¶´´´´´´´´´´´´´´´´´´´´´´´¶¶¶¶´´´´´´´´´´´´´´
@@ -37,14 +39,16 @@ def start_game():
 ´´´´´´¶¶´´´¶¶¶´´´´´´´´´´´¶¶¶¶¶¶¶¶¶´´´´´´´´´´´¶¶¶´´´¶¶´´´´´´
 ´´´´´´¶¶´´¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶´´¶¶´´´´´´
 ´´´´´´´¶¶¶¶´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´¶¶¶¶´´´´´´´
-\n''')
+\n"""
+    )
     print("Welcome to Treasure Island!\nYour mission is to find the treasure.")
-    encounter_list = ["fork_in_path","river_crossing","ruins_doors"]
+    encounter_list = ["fork_in_path", "river_crossing", "ruins_doors"]
     for encounter in encounter_list:
         print("\n")
         win = process_encounter(encounter)
     end_game(win)
     return
+
 
 def end_game(win):
     end_message = "Congratulations, you win!" if win is True else "GAME OVER"
@@ -76,7 +80,7 @@ def process_encounter(encounter):
 def process_input(options):
     input_request = ""
     for i, option in enumerate(options):
-        if i == len(options)-1:
+        if i == len(options) - 1:
             input_request += " or "
         elif i > 0:
             input_request += ", "
@@ -87,35 +91,43 @@ def process_input(options):
         return process_input(options)
     return choice
 
+
 def is_valid_yn(input):
     if input.lower() in ("y", "n"):
         return True
     else:
         return False
 
+
 if __name__ == "__main__":
     encounters = {
         "fork_in_path": {
-            "prompt":"You encounter a fork in the path, which way will you go?",
+            "prompt": "You encounter a fork in the path, which way will you go?",
             "choices": {
                 "left": {"result": "You safely continue on your path", "correct": True},
-                "right": {"result": "You are ambushed by an angered wild boar!", "correct": False}
-            }
+                "right": {
+                    "result": "You are ambushed by an angered wild boar!",
+                    "correct": False,
+                },
+            },
         },
         "river_crossing": {
             "prompt": "Ahead is a fast flowing river, nearby are wood planks that you could use to build a raft",
             "choices": {
                 "swim": {"result": "You safely swim across.", "correct": True},
-                "raft": {"result": "Your raft breaks apart!", "correct": False}
-            }
+                "raft": {"result": "Your raft breaks apart!", "correct": False},
+            },
         },
         "ruins_doors": {
-            "prompt":"You continue into a decrepit castle, inside which is a Red, Blue and Yellow door",
+            "prompt": "You continue into a decrepit castle, inside which is a Red, Blue and Yellow door",
             "choices": {
                 "red": {"result": "You find a hidden treasure!", "correct": True},
-                "yellow": {"result":"You fall into a spike trap!", "correct": False},
-                "blue": {"result":"The door opens, revealing a hungry bear!", "correct": False}
-            }
-        }
+                "yellow": {"result": "You fall into a spike trap!", "correct": False},
+                "blue": {
+                    "result": "The door opens, revealing a hungry bear!",
+                    "correct": False,
+                },
+            },
+        },
     }
     start_game()
