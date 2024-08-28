@@ -3,9 +3,13 @@ import random
 
 def main():
     options = ["Rock", "Paper", "Scissors"]
-    user_choice = options[int(input(
-        f"What do you choose? Type 0 for {options[0]}, 1 for {options[1]} or 2 for {options[2]}\n"
-    ))]
+    user_choice = options[
+        int(
+            input(
+                f"What do you choose? Type 0 for {options[0]}, 1 for {options[1]} or 2 for {options[2]}\n"
+            )
+        )
+    ]
     computer_choice = random.choice(options)
     outcome = determine_outcome(user_choice, computer_choice)
     print(outcome)
