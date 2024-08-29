@@ -9,6 +9,21 @@ def move():
 def turn_left():
     x + 1
 
+def wall_in_front():
+    return
+
+
+def wall_on_right():
+    return
+
+
+def at_goal():
+    return
+
+
+def front_is_clear():
+    return
+
 
 def turn_right():
     turn_left()

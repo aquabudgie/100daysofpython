@@ -17,6 +17,10 @@ def right_is_clear():
     return
 
 
+def at_goal():
+    return
+
+
 def turn_right():
     turn_left()
     turn_left()
