@@ -2,6 +2,7 @@ import random
 import word_list
 from hangman_art import stages, logo
 
+
 def play_round(word, correct_letters, lives_remaining):
     guess = input("\nPlease guess a letter: ")[0].lower()
     display = ""
@@ -57,7 +58,7 @@ def initialise():
     word = choose_word()
     for i in range(len(word)):
         placeholder += "_"
-    print(logo+"\n\n")
+    print(logo + "\n\n")
     print(placeholder)
     return word, correct_letters, game_over, lives_remaining
 
@@ -70,7 +71,7 @@ def main():
             word, correct_letters, lives_remaining
         )
         print(f"You have {lives_remaining} lives.")
-        stage = 6-lives_remaining
+        stage = 6 - lives_remaining
         print(stages[lives_remaining])
     end_game(outcome, word)
 
