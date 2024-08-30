@@ -9,6 +9,7 @@ def move():
 def turn_left():
     x + 1
 
+
 def wall_in_front():
     return
 
