@@ -28,6 +28,7 @@ def present_choices(a=None):
 
 
 def print_dict_values(index):
+    """Prints the data dictionary value, formatted"""
     print(
         f"{data[index]['name']}, a {data[index]['description']}, from {data[index]['country']}"
     )
@@ -44,6 +45,7 @@ def choose_option():
 
 
 def check_correct(choices, player_choice, endgame):
+    """Check if the player has gotten the right choice"""
     followers_a = data[choices[0]]["follower_count"]
     followers_b = data[choices[1]]["follower_count"]
     if followers_a > followers_b:
@@ -56,7 +58,6 @@ def check_correct(choices, player_choice, endgame):
 
 # def add_score():
 #     return
-
 
 def game_over(score):
     print(f"Sorry, that's wrong. Final score: {score}")
