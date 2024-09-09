@@ -137,7 +137,7 @@ def make_coffee(order, required_resources):
             # have an error message for fun that should theoretically never proc
             print(f"Error, insufficient {name}, aborting")
             off()
-    print(f"Here is your {order}. Enjoy!")
+    print(f"Here is your {order} ☕️. Enjoy!")
 
 
 actions = {"report": report, "off": off}
