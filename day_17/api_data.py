@@ -11,4 +11,14 @@ class ApiData:
         bytes_string = response.content
         content = bytes_string.decode("UTF-8")
         content_dict = ast.literal_eval(content)
+        content_dict = self.clean_data(content_dict)
         return content_dict["results"]
+    
+    # Incomplete
+    def clean_data(self, content_dict):
+        for result in content_dict["results"]:
+            print(result)
+        return content_dict
+
+
+data = ApiData("https://opentdb.com/api.php?amount=10&type=boolean")
