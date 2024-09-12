@@ -59,6 +59,7 @@ def check_correct(choices, player_choice, endgame):
 # def add_score():
 #     return
 
+
 def game_over(score):
     print(f"Sorry, that's wrong. Final score: {score}")
     return
