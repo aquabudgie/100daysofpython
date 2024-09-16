@@ -1,1 +1,1 @@
-black . --diff 
+black . --diff
