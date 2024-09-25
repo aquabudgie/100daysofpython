@@ -1,5 +1,6 @@
 from turtle import Screen
 from paddle import Paddle
+from ball import Ball
 
 
 screen = Screen()
@@ -10,11 +11,16 @@ screen.bgcolor("black")
 screen.title(titlestring="Pong Game")
 screen.tracer(0) # stop screen animation
 
-paddle = Paddle()
+right_paddle = Paddle("right")
+left_paddle = Paddle("left")
+
+ball = Ball()
 
 screen.listen()
-screen.onkey(paddle.paddle_up, "Up")
-screen.onkey(paddle.paddle_down, "Down")
+screen.onkey(right_paddle.paddle_up, "Up")
+screen.onkey(right_paddle.paddle_down, "Down")
+screen.onkey(left_paddle.paddle_up, "w")
+screen.onkey(left_paddle.paddle_down, "s")
 
 
 
@@ -22,5 +28,6 @@ game_on = True
 
 while game_on:
     screen.update()
+    ball.move()
 
 screen.exitonclick()
