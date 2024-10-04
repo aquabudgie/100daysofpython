@@ -1,4 +1,5 @@
 from turtle import Screen
+from time import sleep
 from paddle import Paddle
 from ball import Ball
 
@@ -27,6 +28,7 @@ screen.onkey(left_paddle.paddle_down, "s")
 game_on = True
 
 while game_on:
+    sleep(0.1)
     screen.update()
     ball.move()
 
