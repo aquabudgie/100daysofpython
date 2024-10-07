@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+#
+# This file must be sourced.
+
+# This script is used to activate the virtual environment for the project, or
+# create it if it does not exist.
+
+# The virtual environment is created in the directory .venv in the project
+# root. The virtual environment is activated by sourcing the activate script
+# in the .venv/bin directory.
+
+REQUIRED_PYTHON_VERSION="3.12"
+
+[[ -f .python-version ]] && REQUIRED_PYTHON_VERSION=$(cat .python-version)
+
+# First we check the python version.
+if [[ $(python3 --version) != "Python ${REQUIRED_PYTHON_VERSION}"* ]]; then
+  echo "Python ${REQUIRED_PYTHON_VERSION} is required to run this project"
+	return
+else
+	echo "Python version is acceptable"
+fi
+
+if [[ -d .venv ]]; then
+	echo "Virtual environment already exists"
+    .venv/bin/pip install --upgrade pip
+    .venv/bin/pip install -r requirements.txt
+else
+	echo "Creating virtual environment"
+	python3 -m venv .venv
+  .venv/bin/pip install --upgrade pip
+  .venv/bin/pip install -r requirements.txt
+	[[ -f dev-requirements.txt ]] && .venv/bin/pip install -r dev-requirements.txt
+fi
+
+echo "Activating virtual environment"
+source .venv/bin/activate
+
+[[ -f .env ]] && source .env
