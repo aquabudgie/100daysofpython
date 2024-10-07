@@ -1,12 +1,11 @@
-from flask import Flask, Response
+from flask import Flask, Response, render_template
 
 
 app = Flask(__name__)
 
 @app.route("/")
 def greet():
-    return "<h1>Hello World!</h1>" \
-        f"<img src='https://i.giphy.com/l378khQxt68syiWJy.webp' width=300>"
+    return render_template("index.html")
 
 @app.route("/health")
 def get_health():
