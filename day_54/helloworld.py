@@ -36,11 +36,9 @@ def hello_world():
 
 @app.route("/<name>")
 def hello_user(name):
-    return (
-        f"<h1 style='text-align: center'>Hello, {name + '12'}</h1>"
-        "<p>This is a paragraph.</p>"
+    return f"<h1 style='text-align: center'>Hello, {name + '12'}</h1>" \
+        "<p>This is a paragraph.</p>" \
         "<img src='https://offroadium.com/wp-content/uploads/vehicles/subaru/forester/subaru-forester-2019-white-1.jpg' width=300>"
-    )
 
 
 if __name__ == "__main__":
