@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, Response
 from random import randint
 
 app = Flask(__name__)
@@ -16,10 +16,6 @@ links = (
     '<a href="/8">8</a><br>'
     '<a href="/9">9</a><br>'
 )
-
-
-def check_correct():
-    pass
 
 
 def too_low():
@@ -42,6 +38,10 @@ def greet():
     return "<h1>Guess a number between 0 and 9</h1>" \
         f"<img src='https://i.giphy.com/l378khQxt68syiWJy.webp' width=300> + {links}"
 
+@app.route("/health")
+def get_health():
+    """Simple health check endpoint"""
+    return Response(status=200, mimetype="text/plain", response="OK")
 
 @app.route("/<int:number>")
 def check_number(number):

@@ -23,6 +23,8 @@ fi
 
 if [[ -d .venv ]]; then
 	echo "Virtual environment already exists"
+    .venv/bin/pip install --upgrade pip
+    .venv/bin/pip install -r requirements.txt
 else
 	echo "Creating virtual environment"
 	python3 -m venv .venv
