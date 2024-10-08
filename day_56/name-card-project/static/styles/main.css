@@ -85,10 +85,10 @@
 	body {
 		height: 100%;
 		background-color: #ffffff;
-		background-image: url("../../static/images/outbackliving.jpg"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../static/images/bg.jpg");
-		background-image: url("../../static/images/outbackliving.jpg"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../static/images/bg.jpg");
-		background-image: url("../../static/images/outbackliving.jpg"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../static/images/bg.jpg");
-		background-image: url("../../static/images/outbackliving.jpg"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../static/images/bg.jpg");
+		background-image:  -moz-linear-gradient(60deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../static/images/outbackliving.jpg");
+		background-image:  -webkit-linear-gradient(60deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../static/images/outbackliving.jpg");
+		background-image:  -ms-linear-gradient(60deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../static/images/outbackliving.jpg");
+		background-image:  linear-gradient(60deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../static/images/outbackliving.jpg");
 		background-repeat: repeat,			no-repeat,			no-repeat;
 		background-size: 100% 100%, cover,				cover;
 		background-position: top left,		center center,		bottom center;
@@ -106,10 +106,10 @@
 			opacity: 0;
 			z-index: 1;
 			background-color: #ffffff;
-			background-image: url("../../static/images/outbackliving.jpg"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-			background-image: url("../../static/images/outbackliving.jpg"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-			background-image: url("../../static/images/outbackliving.jpg"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-			background-image: url("../../static/images/outbackliving.jpg"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
+			background-image:  -moz-linear-gradient(60deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 228, 255, 0.35));
+			background-image:  -webkit-linear-gradient(60deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 228, 255, 0.35));
+			background-image:  -ms-linear-gradient(60deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 228, 255, 0.35));
+			background-image:  linear-gradient(60deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 228, 255, 0.35));
 			background-repeat: repeat,			no-repeat;
 			background-size: 100% 100%, cover;
 			background-position: top left,		center center;
